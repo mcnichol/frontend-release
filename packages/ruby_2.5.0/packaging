@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+set -e -x
+
+tar -xzf ruby-2.5.0.tar.gz
+pushd ruby-2.5.0
+    ./configure \
+        --prefix=${BOSH_INSTALL_TARGET} \
+        --disable-install-doc
+    make
+    make install
+popd
+
+tar -zxvf rubygems-2.7.6.tgz
+pushd rubygems-2.7.6.tgz
+    ${BOSH_INSTALL_TARGET}/bin/ruby setup.rb
+popd
+
+${BOSH_INSTALL_TARGET}/bin/gem install bundler-1.16.1.gem --no-ri --no-rdoc
