@@ -12,7 +12,7 @@ pushd ruby-2.5.0
 popd
 
 tar -zxvf rubygems-2.7.6.tgz
-pushd rubygems-2.7.6.tgz
+pushd rubygems-2.7.6
     ${BOSH_INSTALL_TARGET}/bin/ruby setup.rb
 popd
 
