@@ -16,4 +16,4 @@ pushd rubygems-2.7.6
     ${BOSH_INSTALL_TARGET}/bin/ruby setup.rb
 popd
 
-${BOSH_INSTALL_TARGET}/bin/gem install bundler-1.16.1.gem --no-ri --no-rdoc
+${BOSH_INSTALL_TARGET}/bin/gem install bundler-1.16.1.gem --no-ri --no-rdoc --force
