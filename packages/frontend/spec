@@ -2,7 +2,7 @@
 name: frontend
 
 dependencies: 
-- ruby_2.5.0
+- ruby_2.4.1
 
 files:
 - frontend/**/*

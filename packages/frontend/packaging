@@ -7,7 +7,7 @@ cp -a frontend/* ${BOSH_INSTALL_TARGET}
 
 cd ${BOSH_INSTALL_TARGET}
 
-/var/vcap/packages/ruby_2.5.0/bin/bundle install \
+/var/vcap/packages/ruby_2.4.1/bin/bundle install \
     --local \
     --deployment \
     --without development test

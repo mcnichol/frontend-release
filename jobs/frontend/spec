@@ -6,11 +6,13 @@ templates:
 
 packages:
     - frontend
-    - ruby_2.5.0
+    - ruby_2.4.1
+
+consumes:
+    - name: etcd
+      type: etcd_service
 
 properties:
     frontend.port:
         description: Port that the frontend app listens on
         default: 80
-    frontend.etcd_servers:
-        description: IP Addresses of backend Etcd Servers

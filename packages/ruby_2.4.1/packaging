@@ -2,8 +2,8 @@
 
 set -e -x
 
-tar -xzf ruby-2.5.0.tar.gz
-pushd ruby-2.5.0
+tar -xzf ruby-2.4.1.tar.gz
+pushd ruby-2.4.1
     ./configure \
         --prefix=${BOSH_INSTALL_TARGET} \
         --disable-install-doc
@@ -11,9 +11,9 @@ pushd ruby-2.5.0
     make install
 popd
 
-tar -zxvf rubygems-2.7.6.tgz
-pushd rubygems-2.7.6
+tar -zxvf rubygems-2.6.12.tgz
+pushd rubygems-2.6.12
     ${BOSH_INSTALL_TARGET}/bin/ruby setup.rb
 popd
 
-${BOSH_INSTALL_TARGET}/bin/gem install bundler-1.16.1.gem --no-ri --no-rdoc --force
+${BOSH_INSTALL_TARGET}/bin/gem install bundler-1.15.3.gem --no-ri --no-rdoc

@@ -1,9 +1,0 @@
----
-name: ruby_2.5.0
-
-dependencies: []
-
-files:
-- ruby-2.5.0.tar.gz         # https://cache.ruby-lang.org/pub/ruby/2.5/ruby-2.5.0.tar.gz
-- rubygems-2.7.6.tgz        # https://rubygems.org/rubygems/rubygems-2.7.6.tgz
-- bundler-1.16.1.gem        # https://rubygems.org/downloads/bundler-1.16.1.gem

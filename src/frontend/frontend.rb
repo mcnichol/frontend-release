@@ -1,4 +1,4 @@
-require 'rubygerms'
+require 'rubygems'
 require 'sinatra'
 require 'httparty'
 
@@ -12,7 +12,7 @@ def random_etcd_server
 end
 
 def value_url
-    "Http://" + random_etcd_server + ":4001/v2/keys/frontend"
+    "http://" + random_etcd_server + ":4001/v2/keys/frontend"
 end
 
 def get_value
@@ -20,7 +20,7 @@ def get_value
 end
 
 def set_value(new_value)
-    HTTParty.put(value_url, body: "value=${new_value}")
+    HTTParty.put(value_url, body: "value=#{new_value}")
 end
 
 def html_escape(v)
@@ -31,7 +31,7 @@ get '/' do
     <<-HTML
     <!DOCTYPE html>
     <html><body>
-    <h1>Etcxd Frontend</h1>
+    <h1>Etcd Frontend</h1>
     <pre><code>#{html_escape(get_value)}</code></pre>
     <form action="/" method="POST">
     <label>New value:</label>
